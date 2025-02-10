@@ -1,0 +1,25 @@
+{
+    "globals": {
+        "model_name":"Qwen/Qwen2.5-7B-Instruct"
+    },
+    "vllm_inference":{
+        "n":1,
+        "best_of":5,
+        "temperature":0.2,
+        "top_p" : 0.9,
+        "seed" : 20,
+        "max_tokens" : 100,
+        "logprobs" : 1,
+        "prompt_logprobs" : 20
+    },
+    "openai" : {"api_key" : "EMPTY",
+"base_url":"url"},
+"openai_inference" : {
+    "logprobs": true,
+    "n" : 5,
+    "top_logprobs" : 2,
+    "max_tokens" : 800,
+    "temperature" : 0.8,
+    "top_p" : 0.95
+    }
+}

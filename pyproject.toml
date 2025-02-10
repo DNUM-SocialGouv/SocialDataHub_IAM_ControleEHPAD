@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "text_extraction"
+version = "0.1.0"
+description = ""
+authors = ["Klee"]
+readme = "README.md"
+include = ["text_extraction/acronyme.json", "inference_llm/settings_llm.json"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.3"
+ipykernel = "^6.29.5"
+python-docx = "^1.1.2"
+jupyter = "^1.1.1"
+openpyxl = "^3.1.5"
+openai = "^1.57.4"
+nltk = "^3.9.1"
+scikit-learn = "^1.6.1"
+torch = "^2.6.0"
+saagieapi = "2.12.1"
+urllib3 = "1.26.15"
+pyyaml = "6.0.1"
+
+[tool.poetry.scripts]
+text-extract = "text_extraction.main:main"
+inference-llm = "inference_llm.main:main"
+text-transform = "text_transformation.main:main"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,32 @@
+on: [push]
+
+env:
+  CI_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: Test job
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v4 # checkout the repository content
+
+      - name: Ci with saagie tool
+        id: update
+        uses: saagie/saagie_cicd_tool@v0.0.3
+        with:
+          saagie_url: ${{secrets.SAAGIE_URL}}
+          saagie_user: ${{secrets.SAAGIE_USER}}
+          saagie_pwd: ${{secrets.SAAGIE_PWD}}
+          saagie_realm: ${{secrets.SAAGIE_REALM}}
+          saagie_env: 'dev'
+          job_config_folder: './saagie/jobs/*.json'
+          pipeline_config_folder: './saagie/pipelines/*.json'
+          env_config_folder: './saagie/envs/*.json'
+          job_source_folder: './code/jobs/*/*'
+          pipeline_source_folder: './code/pipelines/*.yaml'
+          artefact_code_folder: './dist/*/*'
+
+      # Print the output time
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"

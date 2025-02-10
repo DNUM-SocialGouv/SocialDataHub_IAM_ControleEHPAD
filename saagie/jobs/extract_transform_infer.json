@@ -1,0 +1,12 @@
+{
+    "job_name": "Text extraction and transformation then iinferrence",
+    "code_path": "extract_transform_infer",
+    "file_path": "dist/extract_transform_infer/extract_transform_infer.zip",
+    "description": "Extract and transform text for inferrence",
+    "category": "Extraction",
+    "technology": "Python",
+    "technology_catalog": "Saagie",
+    "runtime_version": "3.11",
+    "command_line":  "unzip {file}\npip install -r requirements.txt\npython -m text_extraction.main --path_folder data/input --output_excel data/extraction/extraction\npython -m text_transformation.main --path_in data/extraction/extraction.pkl --path_out data/transform/transform.pkl",
+    "version": "0"
+}

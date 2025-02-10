@@ -1,0 +1,8 @@
+dist/*
+code/jobs/extract_transform_infer/data/input/
+!code/jobs/extract_transform_infer/data/input/demo.txt
+code/jobs/extract_transform_infer/data/extraction/*
+!code/jobs/extract_transform_infer/data/extraction/demo.txt
+code/jobs/extract_transform_infer/data/transform/*
+!code/jobs/extract_transform_infer/data/transform/demo.txt
+code/jobs/extract_transform_infer/inference_llm/settings_llm.json

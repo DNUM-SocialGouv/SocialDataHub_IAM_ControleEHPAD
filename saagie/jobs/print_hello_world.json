@@ -1,0 +1,12 @@
+{
+    "job_name": "Print Hello World job",
+    "code_path": "print_hello_world",
+    "file_path": "dist/print_hello_world/print_hello_world.zip",
+    "description": "Print a Hello World into the console",
+    "category": "Extraction",
+    "technology": "Python",
+    "technology_catalog": "Saagie",
+    "runtime_version": "3.11",
+    "command_line":  "unzip {file}\npython __main__.py",
+    "version": "0"
+}
